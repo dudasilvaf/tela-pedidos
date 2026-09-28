@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FilaZero - Fazer Pedido</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="logo">
+            <img src="./filazero.png" alt="">
+
+        </div>
+
+        <div class="usuario">
+            Olá, Maria! 👋
+        </div>
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+        <div class="titulo">
+            <h1>Cardápio</h1>
+            <p>Escolha sua refeição e faça seu pedido.</p>
+        </div>
+
+
+        <!-- CATEGORIAS -->
+        <div class="categorias">
+
+            <button class="categoria ativa">
+                🍛 Refeições
+            </button>
+
+            <button class="categoria">
+                🍔 Lanches
+            </button>
+
+            <button class="categoria">
+                🥤 Bebidas
+            </button>
+
+            <button class="categoria">
+                🍰 Sobremesas
+            </button>
+
+        </div>
+
+
+        <!-- PRODUTOS -->
+        <section class="produtos">
+
+            <!-- PRODUTO 1 -->
+            <div class="produto">
+
+                <div class="">
+                    <img src="./frango grelhado.png" alt="">
+                </div>
+
+                <div class="produto-info">
+                    <h2>Filé de Frango Grelhado</h2>
+
+                    <p>
+                        Arroz, feijão, frango grelhado, salada e batata frita.
+                    </p>
+
+                    <strong>R$ 20,00</strong>
+
+                    <button onclick="adicionarProduto('Filé de Frango Grelhado', 16)">
+                        + Adicionar
+                    </button>
+                </div>
+
+            </div>
+
+
+            <!-- PRODUTO 2 -->
+            <div class="produto">
+
+                <div class="">
+                    <img src="./bife acebolado.png" alt="">
+                </div>
+
+                <div class="produto-info">
+                    <h2>Bife acebolado</h2>
+
+                    <p>
+                        Arroz, feijão, bife, cebola e batata frita.
+                    </p>
+
+                    <strong>R$ 24,00</strong>
+
+                    <button onclick="adicionarProduto('Bife acebolado', 14)">
+                        + Adicionar
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- PRODUTO 3 -->
+            <div class="produto">
+
+                <div class="">
+                    <img src="./strogonoff de frango.png" alt="">
+                </div>
+
+                <div class="produto-info">
+                    <h2>Strogonoff</h2>
+
+                    <p>
+                        Arroz, strogonoff de frando e batata palha.
+                    </p>
+
+                    <strong>R$ 24,00</strong>
+
+                    <button onclick="adicionarProduto('Strogonoff de Frango', 14)">
+                        + Adicionar
+                    </button>
+                </div>
+
+            </div>
+
+
+            <!-- PRODUTO 3 -->
+            <div class="produto">
+
+                <div class="">
+                    <img src="./calabresa.acebolada.png" alt="">
+                </div>
+
+                <div class="produto-info">
+                    <h2>Calabresa Acebolada</h2>
+
+                    <p>
+                        Arroz, feijão, calabresa, cebola, salada e batata frita.
+                    </p>
+
+                    <strong>R$ 18,00</strong>
+
+                    <button onclick="adicionarProduto('Salada Completa', 13)">
+                        + Adicionar
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- CARRINHO -->
+    <aside class="carrinho">
+
+        <div class="carrinho-titulo">
+            <h2>🛒 Seu pedido</h2>
+            <span id="quantidade">0 itens</span>
+        </div>
+
+        <div id="lista-pedido">
+
+            <p class="vazio">
+                Seu pedido está vazio.
+                <br>
+                Adicione algum item!
+            </p>
+
+        </div>
+
+        <div class="total">
+
+            <div>
+                <span>Total</span>
+                <strong id="total">R$ 0,00</strong>
+            </div>
+
+            <button onclick="finalizarPedido()">
+                Continuar pedido
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
